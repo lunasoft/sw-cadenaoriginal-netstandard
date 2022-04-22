@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>sw_cadenaoriginal</RootNamespace>
-    <VersionPrefix>0.0.0.0</VersionPrefix>
+    <VersionPrefix>0.0.0.1</VersionPrefix>
     <AssemblyName>sw-cadenaoriginal-netstandard</AssemblyName>
     <Title>SDK SW sapien®</Title>
     <Authors>SW sapien®</Authors>
