@@ -1,0 +1,58 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+  branches:
+    include:
+      - "master"
+      - "develop"
+      - "hotfix/*"
+      - "feature/*"
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'restore'
+    projects: 'sw-cadenaoriginal-netstandard.sln'
+    feedsToUse: 'config'
+    nugetConfigPath: 'NuGet.config'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    projects: 'sw-cadenaoriginal-netstandard.sln'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'test'
+    projects: 'test/sw-cadenaoriginal-test/sw-cadenaoriginal-test.csproj'
+    publishTestResults: false
+    workingDirectory: 'test/sw-cadenaoriginal-test'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'custom'
+    projects: 'src/sw-cadenaoriginal/*.csproj'
+    custom: 'pack'
+    arguments: '-c Release'
+  # Run if the trigger was master.
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'custom'
+    projects: 'src/sw-cadenaoriginal/*.csproj'
+    custom: 'pack'
+    arguments: '-c Release --version-suffix rc'
+  # Run if the trigger was anything but master.
+  condition: and(succeeded(), ne(variables['Build.SourceBranch'], 'refs/heads/master'))
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: 'src/sw-cadenaoriginal/bin'
+    ArtifactName: 'bin'
+    publishLocation: 'Container'
+  # Run only if the trigger was master or develop
+  condition: and(succeeded(), or(eq(variables['Build.SourceBranch'], 'refs/heads/master'), eq(variables['Build.SourceBranch'], 'refs/heads/develop')))
