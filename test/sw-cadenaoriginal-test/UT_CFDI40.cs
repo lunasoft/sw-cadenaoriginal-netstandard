@@ -94,5 +94,15 @@ namespace sw_cadenaoriginal_test
             string cadena = CadenaOriginal.CadenaOriginalCFDI(xml, "4.0");
             Assert.True(cadena.Equals("||4.0|Serie|Folio|2022-02-23T00:18:10||CondicionesDePago|0|0|XXX|0|T|01|20000|EKU9003173C9|ESCUELA KEMPER URGATE|601|EKU9003173C9|ESCUELA KEMPER URGATE|26015|601|S01|50211503|UT421511|1|H87|Pieza|Cigarros|0.00|0.00|01|21 47 3807 8003832|50211503|123|1|Pieza|cosas|200.00|200.00|2.0|No|1|Origen|OR101010|EKU9003173C9|2021-11-01T00:00:00|calle|211|0347|23|casa blanca|004|COA|MEX|25350|Destino|DE202020|AAA010101AAA|2021-11-01T01:00:00|1|calle|214|0347|23|casa blanca|004|COA|MEX|25350|1.0|XBX|1|11121900|Accesorios de equipo de telefonía|1.0|XBX|No|1.0|1|OR101010|DE202020|TPAF01|NumPermisoSCT|VL|plac892|2020|SW Seguros|123456789|SW Seguros|CTR004|VL45K98|01|VAAM130719H60|a234567890||"), cadena);
         }
+        /// <summary>
+        /// Generar cadena original de un CFDI 4.0 de tipo traslado con carta porte 3.0 especificando la versión
+        /// </summary>
+        [Fact]
+        public void UT_CFDI40_Traslado_CartaPorte30()
+        {
+            string xml = Encoding.UTF8.GetString(File.ReadAllBytes("Resources/CFDI40/cfdicp30.xml"));
+            string cadena = CadenaOriginal.CadenaOriginalCFDI(xml, "4.0");
+            Assert.True(cadena.Equals("||4.0|Serie|Folio|2023-10-04T00:00:15|01|30001000000500003416|100.00|MXN|100.00|I|01|PUE|42501|EKU9003173C9|ESCUELA KEMPER URGATE|601|EKU9003173C9|ESCUELA KEMPER URGATE|42501|601|S01|78101800|UT421511|1|H87|Pieza|Transporte de carga por carretera|100.00|100.00|01|3.0|CCCBCD94-870A-4332-A52A-A52AA52AA52A|No|1|Sí|01|01|Origen|OR101010|EKU9003173C9|NombreRemitenteDestinatario1|2023-08-01T00:00:00|Calle1|211|212|1957|13|casa blanca|011|CMX|MEX|13250|Destino|DE202020|EKU9003173C9|NombreRemitenteDestinatario2|2023-08-01T00:00:01|1|Calle2|214|215|0347|23|casa negra|004|COA|MEX|25350|1.0|XBX|1|1|Sí|11121900|Accesorios de equipo de telefonía|1.0|XBX|No|01|DenominacionGenericaProd1|DenominacionDistintivaProd1|Fabricante1|2028-01-01|LoteMedic1|01|01|RegistroSanita1|1|1|OR101010|DE202020|TPAF01|NumPermisoSCT1|VL|1|plac892|2020|AseguraRespCivil|123456789|CTR004|VL45K98|01|VAAM130719H60|a234567890|NombreFigura||"), cadena);
+        }
     }
 }
