@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>sw_cadenaoriginal</RootNamespace>
-    <VersionPrefix>0.0.0.1</VersionPrefix>
+    <VersionPrefix>0.0.1.1</VersionPrefix>
     <AssemblyName>sw-cadenaoriginal-netstandard</AssemblyName>
     <Title>SDK SW sapien®</Title>
     <Authors>SW sapien®</Authors>
@@ -103,6 +103,7 @@
     <None Remove="Resources\CFDI40\aerolineas.xslt" />
     <None Remove="Resources\CFDI40\cadenaoriginal_4_0.xslt" />
     <None Remove="Resources\CFDI40\CartaPorte20.xslt" />
+    <None Remove="Resources\CFDI40\CartaPorte30.xslt" />
     <None Remove="Resources\CFDI40\certificadodedestruccion.xslt" />
     <None Remove="Resources\CFDI40\cfdiregistrofiscal.xslt" />
     <None Remove="Resources\CFDI40\ComercioExterior11.xslt" />
@@ -216,6 +217,7 @@
     <EmbeddedResource Include="Resources\CFDI40\aerolineas.xslt" />
     <EmbeddedResource Include="Resources\CFDI40\cadenaoriginal_4_0.xslt" />
     <EmbeddedResource Include="Resources\CFDI40\CartaPorte20.xslt" />
+    <EmbeddedResource Include="Resources\CFDI40\CartaPorte30.xslt" />
     <EmbeddedResource Include="Resources\CFDI40\certificadodedestruccion.xslt" />
     <EmbeddedResource Include="Resources\CFDI40\cfdiregistrofiscal.xslt" />
     <EmbeddedResource Include="Resources\CFDI40\ComercioExterior11.xslt" />
