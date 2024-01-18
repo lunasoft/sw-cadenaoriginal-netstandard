@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>sw_cadenaoriginal</RootNamespace>
-    <VersionPrefix>0.0.1.2</VersionPrefix>
+    <VersionPrefix>0.0.2.1</VersionPrefix>
     <AssemblyName>sw-cadenaoriginal-netstandard</AssemblyName>
     <Title>SDK SW sapien®</Title>
     <Authors>SW sapien®</Authors>
@@ -107,6 +107,7 @@
     <None Remove="Resources\CFDI40\certificadodedestruccion.xslt" />
     <None Remove="Resources\CFDI40\cfdiregistrofiscal.xslt" />
     <None Remove="Resources\CFDI40\ComercioExterior11.xslt" />
+    <None Remove="Resources\CFDI40\ComercioExterior20.xslt" />
     <None Remove="Resources\CFDI40\consumodeCombustibles11.xslt" />
     <None Remove="Resources\CFDI40\detallista.xslt" />
     <None Remove="Resources\CFDI40\divisas.xslt" />
@@ -221,6 +222,7 @@
     <EmbeddedResource Include="Resources\CFDI40\certificadodedestruccion.xslt" />
     <EmbeddedResource Include="Resources\CFDI40\cfdiregistrofiscal.xslt" />
     <EmbeddedResource Include="Resources\CFDI40\ComercioExterior11.xslt" />
+    <EmbeddedResource Include="Resources\CFDI40\ComercioExterior20.xslt" />
     <EmbeddedResource Include="Resources\CFDI40\consumodeCombustibles11.xslt" />
     <EmbeddedResource Include="Resources\CFDI40\detallista.xslt" />
     <EmbeddedResource Include="Resources\CFDI40\divisas.xslt" />

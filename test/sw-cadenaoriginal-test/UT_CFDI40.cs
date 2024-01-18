@@ -104,5 +104,15 @@ namespace sw_cadenaoriginal_test
             string cadena = CadenaOriginal.CadenaOriginalCFDI(xml, "4.0");
             Assert.True(cadena.Equals("||4.0|Serie|Folio|2023-10-02T11:30:55|01|30001000000500003416|100.00|MXN|100.00|I|01|PUE|20000|EKU9003173C9|ESCUELA KEMPER URGATE|601|URE180429TM6|UNIVERSIDAD ROBOTICA ESPAÑOLA|86991|601|G01|78101800|UT421511|1|H87|Pieza|Transporte de carga por carretera|100.00|100.00|01|3.0|CCC98765-FEDC-5678-4321-ABCDEF098765|No|5|Origen|OR123456|URE180429TM6|2023-10-02T18:00:00|2109|05|057|OAX|MEX|70300|Destino|DE123456|URE180429TM6|2023-10-02T19:00:00|5|2109|05|057|OAX|MEX|70300|1|KGM|1|10101500|Mercancia|1.00|18|01|Medicamento|Medicamento|SW Sapien|2024-01-23|123456|01|03|123456789|1.00|1|OR123456|DE123456|TPAF01|12345|C2|100|ABC123|2023|SW Sapien|12345|01|123456789|Nombre Apellido||"), cadena);
         }
+        /// <summary>
+        /// Generar cadena original de un CFDI 4.0 de tipo traslado con comercio exterior 2.0 especificando la versión
+        /// </summary>
+        [Fact]
+        public void UT_CFDI40_Traslado_ComercioExterior20()
+        {
+            string xml = Encoding.UTF8.GetString(File.ReadAllBytes("Resources/CFDI40/CFDI40_cce20.xml"));
+            string cadena = CadenaOriginal.CadenaOriginalCFDI(xml, "4.0");
+            Assert.True(cadena.Equals("||4.0|Serie|Folio1|2024-01-12T00:00:00|99|30001000000500003416|CondicionesDePago|400|AMD|1|400.06|I|02|PPD|20000|EKU9003173C9|ESCUELA KEMPER URGATE|601|XEXX010101000|U.S. & SW|20000|USA|123456789|616|CP01|50211503|131494-1055|2|H87|Pieza|Cigarros|200.00|400.00|02|1|002|Tasa|0.160000|0.16|1|001|Tasa|0.100000|0.10|001|0.10|0.10|1|002|Tasa|0.160000|0.16|0.16|2.0|A1|0|FOB|16.9912|25.56|CALLE DEL PAPEL|0214|01|014|QUE|MEX|76199|123456789|ST. A|TX|USA|00000|131494-1055|2402200100|117.64|01|12.78|25.56||"), cadena);
+        }
     }
 }
