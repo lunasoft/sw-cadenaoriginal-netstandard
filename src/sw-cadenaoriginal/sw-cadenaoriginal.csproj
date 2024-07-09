@@ -104,6 +104,7 @@
     <None Remove="Resources\CFDI40\cadenaoriginal_4_0.xslt" />
     <None Remove="Resources\CFDI40\CartaPorte20.xslt" />
     <None Remove="Resources\CFDI40\CartaPorte30.xslt" />
+    <None Remove="Resources\CFDI40\CartaPorte31.xslt" />
     <None Remove="Resources\CFDI40\certificadodedestruccion.xslt" />
     <None Remove="Resources\CFDI40\cfdiregistrofiscal.xslt" />
     <None Remove="Resources\CFDI40\ComercioExterior11.xslt" />
@@ -219,6 +220,7 @@
     <EmbeddedResource Include="Resources\CFDI40\cadenaoriginal_4_0.xslt" />
     <EmbeddedResource Include="Resources\CFDI40\CartaPorte20.xslt" />
     <EmbeddedResource Include="Resources\CFDI40\CartaPorte30.xslt" />
+    <EmbeddedResource Include="Resources\CFDI40\CartaPorte31.xslt" />
     <EmbeddedResource Include="Resources\CFDI40\certificadodedestruccion.xslt" />
     <EmbeddedResource Include="Resources\CFDI40\cfdiregistrofiscal.xslt" />
     <EmbeddedResource Include="Resources\CFDI40\ComercioExterior11.xslt" />
