@@ -26,6 +26,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Resources\CFDI40\CFDI31_Ingreso.xml" />
+    <None Remove="Resources\CFDI40\CFDI31_Traslado.xml" />
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="Helpers\" />
   </ItemGroup>
 </Project>
