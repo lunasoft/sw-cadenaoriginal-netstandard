@@ -134,5 +134,15 @@ namespace sw_cadenaoriginal_test
             string cadena = CadenaOriginal.CadenaOriginalCFDI(xml, "4.0");
             Assert.True(cadena.Equals("||4.0|Serie|Folio|2024-06-18T00:00:55|30001000000500003416|0|XXX|0|T|01|42501|EKU9003173C9|ESCUELA KEMPER URGATE|601|EKU9003173C9|ESCUELA KEMPER URGATE|42501|601|S01|78101800|UT421511|1|H87|Pieza|Transporte de carga por carretera|100.00|100.00|01|3.1|CCCBCD94-870A-4332-A52A-A52AA52AA52A|No|1|Sí|01|01|Origen|OR101010|EKU9003173C9|NombreRemitenteDestinatario1|2023-08-01T00:00:00|Calle1|211|212|1957|13|casa blanca|011|CMX|MEX|13250|Destino|DE202020|EKU9003173C9|NombreRemitenteDestinatario2|2023-08-01T00:00:01|1|Calle2|214|215|0347|23|casa negra|004|COA|MEX|25350|1.0|XBX|1|Sí|11121900|Accesorios de equipo de telefonía|1.0|XBX|No|DenominacionGenericaProd1|DenominacionDistintivaProd1|Fabricante1|2028-01-01|LoteMedic1|RegistroSanita1|1|1|OR101010|DE202020|TPAF01|NumPermisoSCT1|VL|1|plac892|2020|AseguraRespCivil|123456789|CTR004|VL45K98|01|EKU9003173C9|a234567890|NombreFigura||"), cadena);
         }
+        /// <summary>
+        /// Generar cadena original de un CFDI 4.0 de tipo Ingreso con complemento concepto hidrocarburospetroliferos especificando la versión
+        /// </summary>
+        [Fact]
+        public void UT_CFDI40_Ingreso_Hidrocarburo()
+        {
+            string xml = Encoding.UTF8.GetString(File.ReadAllBytes("Resources/CFDI40/CFDI40_Ingreso_Hidrocarburos.xml"));
+            string cadena = CadenaOriginal.CadenaOriginalCFDI(xml, "4.0");
+            Assert.True(cadena.Equals("||4.0|HYP|1001|2026-04-14T17:10:01|03|30001000000500003416|50000.00|MXN|58000.00|I|01|PUE|06600|EKU9003173C9|ESCUELA KEMPER URGATE|601|URE180429TM6|UNIVERSIDAD ROBOTICA ESPAÑOLA|86991|601|G01|15101514|COMB-001|5000|LTR|Litro|Gasolina regular|10.00|50000.00|02|50000.00|002|Tasa|0.160000|8000.00|1.0|PER03|PL/364/DIS/OM/2015|15101514|SP16|50000.00|002|Tasa|0.160000|8000.00|8000.00||"), cadena);
+        }
     }
 }
