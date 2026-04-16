@@ -28,6 +28,7 @@
   <ItemGroup>
     <None Remove="Resources\CFDI40\CFDI31_Ingreso.xml" />
     <None Remove="Resources\CFDI40\CFDI31_Traslado.xml" />
+    <None Remove="Resources\CFDI40\CFDI40_Ingreso_Hidrocarburos.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Helpers\" />
