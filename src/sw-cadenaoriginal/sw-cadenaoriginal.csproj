@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>sw_cadenaoriginal</RootNamespace>
-    <VersionPrefix>0.0.3.1</VersionPrefix>
+    <VersionPrefix>0.0.4.1</VersionPrefix>
     <AssemblyName>sw-cadenaoriginal-netstandard</AssemblyName>
     <Title>SDK SW sapien®</Title>
     <Authors>SW sapien®</Authors>
@@ -115,6 +115,7 @@
     <None Remove="Resources\CFDI40\donat11.xslt" />
     <None Remove="Resources\CFDI40\ecc12.xslt" />
     <None Remove="Resources\CFDI40\GastosHidrocarburos10.xslt" />
+    <None Remove="Resources\CFDI40\hidrocarburospetroliferos.xslt" />
     <None Remove="Resources\CFDI40\iedu.xslt" />
     <None Remove="Resources\CFDI40\implocal.xslt" />
     <None Remove="Resources\CFDI40\ine11.xslt" />
@@ -217,7 +218,9 @@
     <EmbeddedResource Include="Resources\CFDI33\vehiculousado.xslt" />
     <EmbeddedResource Include="Resources\CFDI33\ventavehiculos11.xslt" />
     <EmbeddedResource Include="Resources\CFDI40\aerolineas.xslt" />
-    <EmbeddedResource Include="Resources\CFDI40\cadenaoriginal_4_0.xslt" />
+    <EmbeddedResource Include="Resources\CFDI40\cadenaoriginal_4_0.xslt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\CFDI40\CartaPorte20.xslt" />
     <EmbeddedResource Include="Resources\CFDI40\CartaPorte30.xslt" />
     <EmbeddedResource Include="Resources\CFDI40\CartaPorte31.xslt" />
@@ -231,6 +234,7 @@
     <EmbeddedResource Include="Resources\CFDI40\donat11.xslt" />
     <EmbeddedResource Include="Resources\CFDI40\ecc12.xslt" />
     <EmbeddedResource Include="Resources\CFDI40\GastosHidrocarburos10.xslt" />
+    <EmbeddedResource Include="Resources\CFDI40\hidrocarburospetroliferos.xslt" />
     <EmbeddedResource Include="Resources\CFDI40\iedu.xslt" />
     <EmbeddedResource Include="Resources\CFDI40\implocal.xslt" />
     <EmbeddedResource Include="Resources\CFDI40\ine11.xslt" />
